@@ -1,0 +1,1 @@
+const login=document.getElementById("login");login.addEventListener("submit",(e=>{e.preventDefault();let a=login.email.value,n=login.password.value;firebase.auth().signInWithEmailAndPassword(a,n).then((()=>{alert("Login successful,redirecting to dashboard..."),window.location.assign("dashboard.html")})).catch((e=>alert(e.message)))}));

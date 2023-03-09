@@ -1,0 +1,10 @@
+.stats-info {
+    font-size: 15px;
+    font-weight: bold;
+    font-family:cursive;
+}
+tr,td{
+    color: aliceblue;
+    background: rgb(20,67,103);
+background: linear-gradient(90deg, rgba(20,67,103,1) 0%, rgba(10,51,73,1) 21%);
+}

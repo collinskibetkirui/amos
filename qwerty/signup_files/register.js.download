@@ -1,0 +1,22 @@
+const signup = document.getElementById('signup')
+
+signup.addEventListener('submit', (e) => {
+  e.preventDefault()
+  let email = signup.email.value
+  let password = signup.password.value
+  let cPassword = signup.cpassword.value
+
+  // auth
+  if (password === cPassword) {
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then(() => {
+        alert('Sign up successful,redirecting to login page...')
+        window.location.assign('index.html')
+      })
+      .catch((err) => alert(err.message))
+  } else {
+    alert('Passwords do not match!')
+  }
+})

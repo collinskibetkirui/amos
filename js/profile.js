@@ -1,0 +1,1 @@
+const displayNameHolder=document.getElementById("displayNameHolder"),photoHolder=document.getElementById("photoHolder"),auth=firebase.auth();auth.onAuthStateChanged((e=>{console.log(e),e.displayName&&(displayNameHolder.innerText=e.displayName),e.photoURL&&photoHolder.setAttribute("src",e.photoURL)}));
